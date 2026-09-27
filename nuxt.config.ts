@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   storyblok: {
     accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
-    bridge: process.env.VERCEL_ENV !== "production",
+    bridge: process.env.STORYBLOK_IS_PREVIEW === "true" ? true : false,
   },
   devServer: {
     https: {
