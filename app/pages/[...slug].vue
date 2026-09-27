@@ -23,7 +23,7 @@ const slug = computed(() => {
 
 const { data: story } = await useAsyncData(`story-${slug.value}`, async () => {
   const { data } = await storyblokApi.get(`cdn/stories/${slug.value}`, {
-    version: "draft",
+    version: getStoryVersion(),
   });
   return data.story;
 });
