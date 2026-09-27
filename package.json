@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-vue-storyblok",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "setup:certs": "mkcert -install && mkdir -p certs && mkcert -key-file certs/localhost-key.pem -cert-file certs/localhost.pem localhost 127.0.0.1 ::1"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^11.2.1",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "eslint": "^10.11.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.11"
+  }
+}
